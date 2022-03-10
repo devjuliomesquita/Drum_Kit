@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    background-image: url('./IMAGE/drum.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.title{
+    color: yellow;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 10rem 0;
+    text-align: center;
+}
+.conteiner{
+    height: 100%;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.tecla{
+    height: 80px;
+    width: 80px;
+    background: #333;
+    color: #fff;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+.active{
+
+}
+
+@media(max-width:511px){
+    .title{
+        font-size: 2.5rem;
+        margin: 5rem 0;
+    }
+}
