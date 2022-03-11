@@ -39,7 +39,13 @@ const retirarEfeito = (letra) =>{
 };
 //VERIFICAÇÃO DA LETRA
 const ativarDiv = (evento) =>{
-    let letra = evento.target.id;
+    let letra = '';
+    if (evento.type == 'click'){
+        letra = evento.target.id;
+    }else{
+        letra = evento.key.toUpperCase();
+    }
+    
     let letraPermitida = sons.hasOwnProperty(letra);
     if(letraPermitida){
         adicionarEfeito(letra);
@@ -58,3 +64,5 @@ const tocarSom = (letra) =>{
 exibir(sons);
 document.getElementById('conteiner')
         .addEventListener('click',ativarDiv);
+
+window.addEventListener('keydown', ativarDiv);
